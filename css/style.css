@@ -1,169 +1,252 @@
-/* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+/**************************
+ Fonts
+ **************************/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Poppins:wght@400;500&family=Roboto:wght@400;500&display=swap');
 
-/* Common Styles Or Utilities*/
+/**************************
+ Common Styles Or Utilities
+ **************************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-family: 'Poppins', sans-serif;
     background: #F3F1FF;
     max-width: 1440px;
 }
 
-main {
+.container {
+    max-width: 870px;
+    margin: 0 auto;
+}
+
+/**************************
+ Header
+ **************************/
+header {
+    background: #562EFF;
+    margin-bottom: 36px;
+}
+
+.menubar {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 94px;
+}
+
+.logo {
+    display: flex;
     align-items: center;
 }
 
-.container {
-    background-color: #fff;
-    max-width: 870px;
-    padding: 30px;
-    margin-top: 21px;
+.logo img {
+    max-width: 40px;
+}
+
+.logo span {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    color: #fff;
+    margin-left: 15px;
+}
+
+.menu-links ul {
+    display: flex;
+    align-items: center;
+}
+
+.menu-links ul li {
+    list-style-type: none;
+    margin-left: 45px;
+}
+
+.menu-links ul li a {
+    font-family: 'Poppins';
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+/**************************
+ Top Players & Top Blogs
+ **************************/
+
+
+.players-card,
+.top-blogs-card,
+.course-card {
+    background: #FFFFFF;
     border-radius: 5px;
-    width: 100%;
+    padding: 30px;
 }
 
-hr {
-    border: 1px solid #D1D1D1;
-    margin-bottom: 30px;
+.top-blogs-card {
+    padding-top: 0;
 }
 
-/* Top Players Styles */
-.top-players {
-    margin-bottom: 30px;
-}
-
-.section-title {
+.players h2,
+.top-blogs h2,
+.course h2 {
+    text-transform: capitalize;
+    font-family: 'Poppins';
     font-weight: 500;
     font-size: 24px;
     line-height: 36px;
     color: #562EFF;
-    margin-top: 3px;
+    margin-bottom: 35px;
 }
 
-.players {
+.playerList {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-row-gap: 30px;
+    border-bottom: 1px solid #D1D1D1;
+    padding-bottom: 25px;
 }
 
-.player {
+.blog-lists {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 25px;
+    grid-column-gap: 15px;
+}
+
+.playerInfo {
     display: flex;
     align-items: center;
 }
 
-.player img {
-    width: 56px;
-    height: 56px;
+.playerInfo img {
+    max-width: 56px;
 }
 
-.player-name {
-    margin-left: 16px;
+.playerInfo span {
+    font-family: 'Poppins';
+    font-weight: 500;
     font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+    margin-left: 20px;
 }
 
-/* top blog styles */
-.blogs {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 26px;
-}
-
-.blog {
+.blog-infos {
     display: flex;
 }
 
-.blog .thumbnail img {
+.blog-infos img {
     width: 177px;
-    height: 177px;
+    margin-right: 15px;
 }
 
-.blog-info {
-    margin-left: 16px;
-}
-
-.blog-title {
+.blog-infos h3 {
+    font-family: 'Poppins';
+    font-weight: 500;
     font-size: 20px;
+    line-height: 34px;
+    color: #000000;
+    margin-bottom: 5px;
 }
 
-.blog-author {
-    color: #9f9f9f;
+.blog-infos p {
+    font-family: 'Poppins';
+    font-weight: 400;
     font-size: 16px;
+    line-height: 24px;
+    color: #9F9F9F;
+
 }
 
-.blog-author a {
-    text-decoration: none;
+.blog-infos p a {
     color: #562EFF;
 }
 
-/*--------------
- courses styles
- ------------- */
-.course .course-banner img {
-    width: 224px;
-    height: 104px;
+/**************************
+ Course
+ **************************/
+.course {
+    margin-top: 20px;
 }
 
-.courses {
+.course-lists {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 24px;
+    grid-column-gap: 20px;
 }
 
-.course-info {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.course-infos {
+    filter: drop-shadow(0px 5.34229px 13.3557px rgba(0, 0, 0, 0.05));
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 15px;
 }
 
-.fa-star {
-    font-size: 12px;
+.course-infos img {
+    max-width: 224px;
 }
 
-.fa-star.filled {
-    color: #ffc014;
+.course-infos h3 {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 20.0336px;
+    line-height: 23px;
+    color: #1E1E1E;
 }
 
-.fa-star.empty {
-    color: #aeaeae;
+.course-infos h4 {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14.6913px;
+    line-height: 17px;
+    color: #ED6B4F;
 }
 
-/*---------------
- Media Quiries 
- ----------------*/
+.course-rating-hour {}
 
-/* Mobile Devices */
-@media only screen and (max-width:688px) {
-    .container {
-        width: 100%;
-    }
+.course-rating {}
 
-    .players,
-    .blogs,
-    .courses {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .player,
-    .blogs {
-        flex-direction: column;
-    }
+.course-rating i {
+    color: #FFC014;
 }
 
-/* Tablet Devices */
-@media only screen and (min-width: 689px)and (max-width:992px) {
-    .container {
-        width: 100%;
-    }
-
-    .players,
-    .blogs,
-    .courses {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .player,
-    .blogs {
-        flex-direction: column;
-    }
+.course-rating i.muted {
+    color: #AEAEAE;
+    opacity: 0.25;
 }
+
+.course-rating span {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14.6913px;
+    line-height: 22px;
+    color: #A2A2A2;
+}
+
+.course-hour {}
+
+.course-hour i {
+    color: #ED6B4F;
+}
+
+.course-hour span {
+    font-family: 'Open Sans';
+    font-weight: 600;
+    font-size: 14.6913px;
+    line-height: 20px;
+    color: #ED6B4F;
+
+}
+
+/**************************
+ Responsive
+ **************************/
